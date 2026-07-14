@@ -1,0 +1,109 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+/* Request Section */
+
+.request-section{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+#method{
+    width:120px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#url{
+    flex:1;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+#sendBtn{
+    background:#ff6c37;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+#sendBtn:hover{
+    background:#e65c28;
+}
+
+/* Tabs */
+
+.tabs{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.tabs button{
+    padding:10px 20px;
+    border:none;
+    background:#ececec;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.tabs button:hover{
+    background:#dcdcdc;
+}
+
+/* Response */
+
+.response{
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:15px;
+}
+
+.response h2{
+    margin-bottom:15px;
+}
+
+#responseBox{
+    background:#272822;
+    color:#00ff7f;
+    padding:15px;
+    border-radius:5px;
+    min-height:250px;
+    overflow:auto;
+    white-space:pre-wrap;
+}

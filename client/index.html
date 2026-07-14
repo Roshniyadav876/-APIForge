@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Postman Lite</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Postman Lite</h1>
+
+        <div class="request-section">
+
+            <select id="method">
+
+                <option>GET</option>
+
+                <option>POST</option>
+
+                <option>PUT</option>
+
+                <option>PATCH</option>
+
+                <option>DELETE</option>
+
+                <option>QUERY</option>
+
+            </select>
+
+            <input
+                   type="text"
+
+                   id="url"
+
+                   placeholder="Enter API URL">
+
+            <button id="sendBtn">
+
+                Send
+
+            </button>
+
+        </div>
+
+        <div class="tabs">
+
+            <button>Query</button>
+
+            <button>Headers</button>
+
+            <button>Body</button>
+
+            <button>Auth</button>
+
+        </div>
+
+        <div class="response">
+
+            <h2>Response</h2>
+
+            <pre id="responseBox">
+
+No Response
+
+            </pre>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
