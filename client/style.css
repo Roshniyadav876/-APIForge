@@ -499,6 +499,22 @@ body{
     min-height:120px;
 
 }
+#saveRequestBtn{
+
+    width:100%;
+    margin-bottom:20px;
+
+    background:#10b981;
+
+    color:white;
+
+}
+
+#saveRequestBtn:hover{
+
+    background:#059669;
+
+}
 
 #responseBox{
 
