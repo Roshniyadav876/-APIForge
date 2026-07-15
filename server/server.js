@@ -18,7 +18,13 @@ app.post("/api/request", async (req, res) => {
 
         const data = await apiResponse.json();
 
-        res.json(data);
+        const headers = Object.fromEntries(apiResponse.headers.entries());
+
+        res.json({
+            status: apiResponse.status,
+            headers: headers,
+            body: data
+        });
 
     } catch (error) {
 

@@ -5,13 +5,11 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Postman Lite</title>
 
-    <link rel="stylesheet"
-          href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -19,68 +17,227 @@
 
     <div class="container">
 
-        <h1>Postman Lite</h1>
+        <div class="sidebar">
 
-        <div class="request-section">
+            <h2>Collections</h2>
 
-            <select id="method">
-
-                <option>GET</option>
-
-                <option>POST</option>
-
-                <option>PUT</option>
-
-                <option>PATCH</option>
-
-                <option>DELETE</option>
-
-                <option>QUERY</option>
-
-            </select>
-
-            <input
-                   type="text"
-
-                   id="url"
-
-                   placeholder="Enter API URL">
-
-            <button id="sendBtn">
-
-                Send
-
+            <button id="newCollectionBtn">
+                + New Collection
             </button>
 
+            <div class="collection-list">
+
+                <div class="collection-item">
+                    User APIs
+                </div>
+
+                <div class="collection-item">
+                    Product APIs
+                </div>
+
+            </div>
+
+            <hr>
+
+            <h2>Environment</h2>
+
+            <button id="newEnvironmentBtn">
+                + New Environment
+            </button>
+
+            <div class="environment-list">
+
+                <div class="environment-item">
+                    Development
+                </div>
+
+                <div class="environment-item">
+                    Production
+                </div>
+
+            </div>
         </div>
 
-        <div class="tabs">
+        <div class="main-content">
+            <h1>Postman Lite</h1>
 
-            <button>Query</button>
+            <div class="request-section">
 
-            <button>Headers</button>
+                <select id="method">
 
-            <button>Body</button>
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="PATCH">PATCH</option>
+                    <option value="DELETE">DELETE</option>
+                    <option value="QUERY">QUERY</option>
 
-            <button>Auth</button>
+                </select>
 
-        </div>
+                <input type="text" id="url" placeholder="Enter API URL">
 
-        <div class="response">
+                <button id="sendBtn">
 
-            <h2>Response</h2>
+                    Send
 
-            <pre id="responseBox">
+                </button>
 
-No Response
+            </div>
 
-            </pre>
+            <div class="tabs">
 
+                <button class="tab-btn" id="queryTab">Query</button>
+                <button class="tab-btn" id="headersTab">Headers</button>
+                <button class="tab-btn" id="bodyTab">Body</button>
+                <button class="tab-btn" id="authTab">Auth</button>
+            </div>
+
+            <div class="query-section" id="querySection">
+
+                <h3>Query Parameters</h3>
+
+                <div id="queryContainer">
+                    <div class="query-row">
+
+                        <input id="queryKey" type="text" placeholder="Key">
+
+                        <input id="queryValue" type="text" placeholder="Value">
+                        <button class="delete-btn" type="button">&times;</button>
+
+                    </div>
+                </div>
+
+                <button class="add-btn" id="addQueryBtn" type="button"> + Add Parameter</button>
+
+            </div>
+
+            <div class="headers-section" id="headersSection">
+
+                <h3>Request Headers</h3>
+
+                <div id="headerContainer">
+                    <div class="header-row">
+
+                        <input id="headerKey" type="text" placeholder="Header Name">
+
+                        <input id="headerValue" type="text" placeholder="Header Value">
+
+                        <button class="delete-btn" type="button">&times;</button>
+
+                    </div>
+                </div>
+
+                <button class="add-btn" id="addHeaderBtn" type="button">+ Add Header</button>
+
+            </div>
+
+            <div class="body-section" id="bodySection">
+
+                <h3>Request Body</h3>
+
+                <div class="body-types">
+
+                    <label>
+                        <input type="radio" name="bodyType" value="json" checked>
+                        JSON
+                    </label>
+
+                    <label>
+                        <input type="radio" name="bodyType" value="raw">
+                        Raw Text
+                    </label>
+
+                    <label>
+                        <input type="radio" name="bodyType" value="formdata">
+                        Form Data
+                    </label>
+
+                    <label>
+                        <input type="radio" name="bodyType" value="urlencoded">
+                        x-www-form-urlencoded
+                    </label>
+
+                </div>
+
+                <textarea id="requestBody" placeholder="Enter Request Body"></textarea>
+
+            </div>
+
+            <div class="auth-section" id="authSection">
+
+                <h3>Authentication</h3>
+
+                <label for="authType">Auth Type</label>
+
+                <select id="authType">
+
+                    <option value="none">No Auth</option>
+
+                    <option value="bearer">Bearer Token</option>
+
+                    <option value="basic">Basic Auth</option>
+
+                    <option value="apikey">API Key</option>
+
+                </select>
+
+                <input type="text" id="authValue" placeholder="Enter Token / Username / API Key">
+
+            </div>
+
+            <div class="environment-section" id="environmentSection">
+
+                <h3>Environment Variables</h3>
+
+                <div id="environmentContainer">
+                    <div class="environment-row">
+
+                        <input id="environmentKey" type="text" placeholder="Variable Name">
+
+                        <input id="environmentValue" type="text" placeholder="Variable Value">
+
+                        <button class="delete-btn" type="button">&times;</button>
+
+                    </div>
+                </div>
+
+                <button class="add-btn" id="addEnvironmentBtn" type="button">+ Add Variable</button>
+
+            </div>
+
+            <div class="response" id="responseSection">
+
+                <h2>Response</h2>
+
+                <div class="response-info">
+
+                    <p>Status : <span id="status">-</span></p>
+
+                    <p>Time : <span id="time">-</span></p>
+
+                    <p>Size : <span id="size">-</span></p>
+
+                </div>
+
+                <h3>Response Headers</h3>
+
+                <pre id="headersBox">
+                  No Headers
+                </pre>
+
+                <h3>Response Body</h3>
+
+                <pre id="responseBox">
+                    No Response
+                </pre>
+
+            </div>
         </div>
 
     </div>
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
 
