@@ -1,12 +1,12 @@
 # 🚀 APIForge
 
-APIForge is a lightweight Postman-inspired API testing tool built using **HTML, CSS, JavaScript, Node.js, and Express.js**. It allows users to send HTTP requests, test REST APIs, manage query parameters, request headers, authentication, environment variables, and inspect API responses through a clean and responsive interface.
+APIForge is a lightweight **Postman-inspired API testing tool** built using **HTML, CSS, JavaScript, Node.js, and Express.js**. It allows users to send HTTP requests, test REST APIs, manage query parameters, request headers, authentication, environment variables, and inspect API responses through a clean and responsive interface.
 
 ---
 
 ## ✨ Features
 
-### 📡 HTTP Methods
+### 📡 Supported HTTP Methods
 - ✅ GET
 - ✅ POST
 - ✅ PUT
@@ -33,11 +33,10 @@ APIForge is a lightweight Postman-inspired API testing tool built using **HTML, 
 - x-www-form-urlencoded (UI)
 
 ### 🌍 Environment Variables
-- Configure environment variables.
-- Replace variables inside API URLs.
+- Configure and use environment variables in API URLs.
 
 ### 💾 Collections
-- Save current request using LocalStorage.
+- Save the current request using LocalStorage.
 - Automatically restore the last saved request.
 
 ### 📊 Response Viewer
@@ -53,9 +52,9 @@ APIForge is a lightweight Postman-inspired API testing tool built using **HTML, 
 - Tab-based Request Editor
 - Clean & Modern UI
 
-### ⚙ Backend
+### ⚙ Backend Architecture
 - Express.js Server
-- Modular Architecture
+- Modular Structure
 - Routes
 - Controllers
 - Services
@@ -83,7 +82,7 @@ APIForge is a lightweight Postman-inspired API testing tool built using **HTML, 
 # 📂 Project Structure
 
 ```
-APIForge/
+lite-postman/
 │
 ├── client/
 │   ├── index.html
@@ -111,6 +110,7 @@ APIForge/
 │
 ├── package.json
 ├── package-lock.json
+├── .gitignore
 └── README.md
 ```
 
@@ -124,11 +124,13 @@ APIForge/
 git clone https://github.com/Roshniyadav876/-APIForge.git
 ```
 
-## Navigate to Project
+## Navigate to Project Folder
 
 ```bash
-cd APIForge
+cd lite-postman
 ```
+
+> If your local project folder has a different name, navigate to that folder instead.
 
 ## Install Dependencies
 
@@ -148,17 +150,11 @@ The backend server runs on:
 http://localhost:5000
 ```
 
-Now open:
-
-```
-client/index.html
-```
-
-in your browser.
+Open `client/index.html` in your browser.
 
 ---
 
-# 🧪 Test APIs
+# 🧪 Sample APIs for Testing
 
 ## GET Request
 
@@ -172,7 +168,7 @@ https://jsonplaceholder.typicode.com/users
 https://jsonplaceholder.typicode.com/posts
 ```
 
-Sample Body:
+### Sample JSON Body
 
 ```json
 {
@@ -190,7 +186,7 @@ Sample Body:
 - Import / Export Collections
 - Request History
 - Pretty JSON Viewer
-- Search Response
+- Search in Response
 - Dark Mode
 
 ---
@@ -203,12 +199,14 @@ B.Tech in Data Science
 
 Technocrats Institute of Technology, Bhopal
 
+GitHub: https://github.com/Roshniyadav876
+
 ---
 
 # 📄 License
 
-This project is developed for **learning and educational purposes**.
+This project is developed for learning and educational purposes.
 
 ---
 
-⭐ If you like this project, consider giving it a **Star** on GitHub!
+⭐ If you found this project useful, consider giving it a **Star** on GitHub!
